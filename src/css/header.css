@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+.header__container {
+  margin: 0 auto;
+  max-width:1300px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(45, 52, 54,.7);
+  border-radius: 0 0 30px 30px;
+}
+.header .header__list {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header--list a:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+
+#toggle-btn {
+  display: none;
+}
