@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <Head>
-      <Contatiner>
+      <Container>
         <Cover>
           <List>
             <Link
@@ -28,18 +28,18 @@ const Header = () => {
             >
               Home
             </Link>
-          </List>{" "}
+          </List>
           <List>
             <Link
               activeClass="active"
-              to={title}
+              to="About"
               spy={true}
               smooth={true}
               duration={500}
             >
               About
             </Link>
-          </List>{" "}
+          </List>
           <List>
             <Link
               activeClass="active"
@@ -50,7 +50,7 @@ const Header = () => {
             >
               Project
             </Link>
-          </List>{" "}
+          </List>
           <List>
             <Link
               activeClass="active"
@@ -63,7 +63,7 @@ const Header = () => {
             </Link>
           </List>
         </Cover>
-      </Contatiner>
+      </Container>
     </Head>
   );
 };
@@ -74,7 +74,7 @@ const Head = styled.div`
   width: 100%;
 `;
 
-const Contatiner = styled.div`
+const Container = styled.div`
   margin: 0 auto;
   max-width: 70rem;
   height: 5rem;
