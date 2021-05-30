@@ -12,56 +12,44 @@ import {
 import styled from "styled-components";
 
 const Header = () => {
-  const [title] = useState();
+  const menu = [
+    {
+      id: 1,
+      title: "Home",
+    },
+    {
+      id: 2,
+      title: "About",
+    },
+    {
+      id: 3,
+      title: "Skills",
+    },
+    {
+      id: 4,
+      title: "Project",
+    },
+  ];
 
   return (
     <Head>
       <Container>
         <Cover>
-          <List>
-            <Link
-              activeClass="active"
-              to={title}
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              Home
-            </Link>
-          </List>
-          <List>
-            <Link
-              activeClass="active"
-              to="About"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              About
-            </Link>
-          </List>
-          <List>
-            <Link
-              activeClass="active"
-              to={title}
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              Project
-            </Link>
-          </List>
-          <List>
-            <Link
-              activeClass="active"
-              to={title}
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              Contact
-            </Link>
-          </List>
+          {menu.map((p) => {
+            return (
+              <List>
+                <Link
+                  activeClass="active"
+                  to={p.title}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  {p.title}
+                </Link>
+              </List>
+            );
+          })}
         </Cover>
       </Container>
     </Head>
@@ -77,7 +65,7 @@ const Head = styled.div`
 const Container = styled.div`
   margin: 0 auto;
   max-width: 70rem;
-  height: 5rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,13 +77,12 @@ const Container = styled.div`
 
 const Cover = styled.div`
   width: 50rem;
+  justify-content: space-between;
   display: flex;
 `;
 
 const List = styled.div`
-  width: 70%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: black;
   user-select: none;
