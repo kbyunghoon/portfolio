@@ -150,6 +150,10 @@ const ProfileImg = styled.div`
   background-size: cover;
   display: flex;
   border: 1px solid #ededed;
+  transition: 0.5s ease-in-out;
+  :hover {
+    transform: scale(1.1);
+  }
   @media only screen and (max-width: 640px) {
     margin-bottom: 1rem;
   }
