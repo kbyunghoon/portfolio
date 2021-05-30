@@ -1,26 +1,28 @@
 import React, { Fragment, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import ReactPlayer from "react-player";
+import Fade from "react-reveal/Fade";
 
 const Project = () => {
   const project = {
     0: {
       id: 1,
+      title: "트리포트",
+      url: "https://youtu.be/gfU-4di9ncs",
+      notionurl:
+        "https://www.notion.so/Triport-33eba307738c44a294474d4498b362b6",
+    },
+    1: {
+      id: 2,
       title: "인스타그램 클론코딩",
       url: "https://youtu.be/OJqWtzs6EeM",
       notionurl: "https://www.notion.so/302b0dabcd1841c7b2fdd9561bc7a750",
     },
-    1: {
-      id: 2,
+    2: {
+      id: 3,
       title: "항해하우스",
       url: "https://youtu.be/zD8-Xns-jrs",
       notionurl: "https://www.notion.so/35f8ce75569d495c90bad49d558a2e3e",
-    },
-    2: {
-      id: 3,
-      title: "트리포트",
-      url: "https://youtu.be/gfU-4di9ncs",
-      notionurl: "https://www.notion.so/Triport-33eba307738c44a294474d4498b362b6",
     },
   };
 
@@ -32,37 +34,39 @@ const Project = () => {
 
   return (
     <Container>
-      <ProjectText>Project</ProjectText>
-      <ProjectContainer>
-        <Projectis id="0" onClick={changeProject}>
-          클론코딩
-        </Projectis>
-        <Projectis id="1" onClick={changeProject}>
-          항해하우스
-        </Projectis>
-        <Projectis id="2" onClick={changeProject}>
-          트리포트
-        </Projectis>
-      </ProjectContainer>
-      <ProjectBox>
-        <ProjectWrap>
-          <Title>{settings.title}</Title>
-          <Bar />
-          <ReactPlayer
-            width="480px"
-            height="270px"
-            url={settings.url}
-            controls
-          />
-          <Button
-            onClick={() => {
-              window.open(settings.notionurl, "_blank");
-            }}
-          >
-            노션 보러가기
-          </Button>
-        </ProjectWrap>
-      </ProjectBox>
+      <Fade up>
+        <ProjectText>Project</ProjectText>
+        <ProjectContainer>
+          <Projectis id="0" onClick={changeProject}>
+            트리포트
+          </Projectis>
+          <Projectis id="1" onClick={changeProject}>
+            클론코딩
+          </Projectis>
+          <Projectis id="2" onClick={changeProject}>
+            항해하우스
+          </Projectis>
+        </ProjectContainer>
+        <ProjectBox>
+          <ProjectWrap>
+            <Title>{settings.title}</Title>
+            <Bar />
+            <ReactPlayer
+              width="480px"
+              height="270px"
+              url={settings.url}
+              controls
+            />
+            <Button
+              onClick={() => {
+                window.open(settings.notionurl, "_blank");
+              }}
+            >
+              프로젝트 상세보기
+            </Button>
+          </ProjectWrap>
+        </ProjectBox>
+      </Fade>
     </Container>
   );
 };

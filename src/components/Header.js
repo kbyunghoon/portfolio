@@ -60,11 +60,14 @@ const Head = styled.div`
   position: fixed;
   z-index: 99;
   width: 100%;
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 70rem;
+  max-width: 50rem;
   height: 3rem;
   display: flex;
   justify-content: center;
@@ -76,12 +79,13 @@ const Container = styled.div`
 `;
 
 const Cover = styled.div`
-  width: 50rem;
+  width: 40rem;
   justify-content: space-between;
   display: flex;
 `;
 
 const List = styled.div`
+  font-family: "AppleSDGothicNeoR", sans-serif;
   display: flex;
   align-items: center;
   color: black;

@@ -43,6 +43,10 @@ const Title = styled.div`
   text-shadow: 4px 4px 30px rgba(150, 150, 150, 1);
   user-select: none;
   transition: 1s;
+  margin: auto 1rem;
+  word-break: keep-all;
+  display: flex;
+  text-align:center;
 `;
 
 export default Home;

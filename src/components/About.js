@@ -1,63 +1,70 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import img from "media/img/profileimg.jpg";
+import Fade from "react-reveal/Fade";
 
 const About = () => {
   return (
     <Container>
       <AboutText>About</AboutText>
-      <Profile>
-        <ProfileImg src={img} />
-        <Produce>
-          <TextBold>김병훈(Frontend Devleoper)</TextBold>
-          <TextBold style={{ marginTop: "15px" }}>Email</TextBold>
-          <Text>kbhthl11@gmail.com</Text>
-          <TextBold style={{ marginTop: "15px" }}>Github</TextBold>
-          <Text
-            style={{
-              textDecoration: "underline",
-              cursor: "pointer",
-              textUnderlinePosition: "under",
-            }}
-            onClick={() =>
-              window.open("https://github.com/kbyunghoon", "_blank")
-            }
-          >
-            https://github.com/kbyunghoon
-          </Text>
-        </Produce>
-      </Profile>
-      <Div
-        style={{
-          marginTop: "100px",
-          fontSize: "5rem",
-          fontFamily: "AppleSDGothicNeoB",
-        }}
-      >
-        Who Am I?
-      </Div>
-      <Div style={{ fontWeight: "600", fontSize: "1.5rem", marginTop: "1rem" }}>
-        저는 무언가 만드는 것을 좋아합니다.
-      </Div>
-      <Div
-        style={{
-          fontSize: "1.2rem",
-          marginTop: "1rem",
-          margin: "auto 2rem",
-          lineHeight: "2rem",
-          marginBottom: "10rem",
-          textAlign: "center",
-        }}
-      >
-        개발자의 매력에 빠지기 이전에 연극영화학과를 졸업하여 CG를 이용하여 3D를
-        모델링 하는 것을 원했습니다.
-        <br />
-        작년 2020년에 비전공자였던 누나가 개발자가 되고 직접 만든 웹사이트를
-        보여주는 순간 저는 그것에 매료되었습니다.
-        <br />
-        이후 항해99 부트캠프에서 코딩을 공부하게 되었고 코딩을 하는 것이 너무
-        좋습니다.
-      </Div>
+      <Fade right>
+        <Profile>
+          <ProfileImg src={img} />
+          <Produce>
+            <TextBold>김병훈(Frontend Develeoper)</TextBold>
+            <TextBold style={{ marginTop: "15px" }}>Email</TextBold>
+            <Text>kbhthl11@gmail.com</Text>
+            <TextBold style={{ marginTop: "15px" }}>Github</TextBold>
+            <Text
+              style={{
+                textDecoration: "underline",
+                cursor: "pointer",
+                textUnderlinePosition: "under",
+              }}
+              onClick={() =>
+                window.open("https://github.com/kbyunghoon", "_blank")
+              }
+            >
+              https://github.com/kbyunghoon
+            </Text>
+          </Produce>
+        </Profile>
+      </Fade>
+      <Fade left>
+        <Div
+          style={{
+            marginTop: "100px",
+            fontSize: "5rem",
+            fontFamily: "AppleSDGothicNeoB",
+          }}
+        >
+          Who Am I?
+        </Div>
+        <Div
+          style={{ fontWeight: "600", fontSize: "1.5rem", marginTop: "1rem" }}
+        >
+          저는 무언가 만드는 것을 좋아합니다.
+        </Div>
+        <Div
+          style={{
+            fontSize: "1.2rem",
+            marginTop: "1rem",
+            margin: "auto 2rem",
+            lineHeight: "2rem",
+            marginBottom: "12rem",
+            textAlign: "center",
+          }}
+        >
+          개발자의 매력에 빠지기 이전에 연극영화학과를 졸업하여 CG를 이용하여
+          3D를 모델링 하는 것을 원했습니다.
+          <br />
+          하지만 작년 2020년에 비전공자였던 누나가 개발자가 되고 직접 만든
+          웹사이트를 보여주는 순간 저는 한 번에 그것에 매료되었습니다.
+          <br />
+          이후 항해99 부트캠프에서 코딩을 공부하면서 코딩을 하는 것이 너무
+          좋습니다.
+        </Div>
+      </Fade>
     </Container>
   );
 };
@@ -72,6 +79,9 @@ const Text = styled.div`
   font-size: 20px;
   display: flex;
   color: white;
+  @media only screen and (max-width: 640px) {
+    justify-content: center;
+  }
 `;
 
 const Produce = styled.div`
@@ -89,7 +99,7 @@ const Container = styled.div`
 `;
 
 const AboutText = styled.div`
-  margin-top: 10rem;
+  margin-top: 5rem;
   margin-bottom: 1rem;
   display: flex;
   text-decoration: underline;
@@ -103,6 +113,10 @@ const Profile = styled.div`
   margin-top: 15px;
   display: flex;
   flex-direction: row;
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ProfileImg = styled.div`
@@ -117,6 +131,9 @@ const ProfileImg = styled.div`
   margin-left: 16px;
   display: flex;
   border: 1px solid #ededed;
+  @media only screen and (max-width: 640px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const TextBold = styled.div`
@@ -125,12 +142,9 @@ const TextBold = styled.div`
   font-weight: 600;
   display: flex;
   color: white;
-`;
-
-const BornIn = styled.div`
-  font-family: "AppleSDGothicNeoR";
-  font-size: 25px;
-  display: flex;
+  @media only screen and (max-width: 640px) {
+    justify-content: center;
+  }
 `;
 
 export default About;
