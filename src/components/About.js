@@ -2,8 +2,14 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import img from "media/img/profileimg.jpg";
 import Fade from "react-reveal/Fade";
+import { ReactComponent as Copy } from "../media/svg/copy.svg";
 
 const About = () => {
+  const copy = () => {
+    navigator.clipboard.writeText("kbhthl11@gmail.com");
+    alert("이메일을 복사하였습니다.")
+  };
+
   return (
     <Container>
       <AboutText>About</AboutText>
@@ -13,7 +19,10 @@ const About = () => {
           <Produce>
             <TextBold>김병훈(Frontend Develeoper)</TextBold>
             <TextBold style={{ marginTop: "15px" }}>Email</TextBold>
-            <Text>kbhthl11@gmail.com</Text>
+            <Text>
+              kbhthl11@gmail.com
+              <Copy onClick={copy} />
+            </Text>
             <TextBold style={{ marginTop: "15px" }}>Github</TextBold>
             <Text
               style={{
@@ -35,6 +44,7 @@ const About = () => {
           style={{
             marginTop: "100px",
             fontSize: "5rem",
+            textAlign: "center",
             fontFamily: "AppleSDGothicNeoB",
           }}
         >
@@ -58,8 +68,10 @@ const About = () => {
           개발자의 매력에 빠지기 이전에 연극영화학과를 졸업하여 CG를 이용하여
           3D를 모델링 하는 것을 원했습니다.
           <br />
-          하지만 작년 2020년에 비전공자였던 누나가 개발자가 되고 직접 만든
-          웹사이트를 보여주는 순간 저는 한 번에 그것에 매료되었습니다.
+          모델링 프로그램 내에 사용하는 파이썬을 다루던 중 재미를 느끼게 되었고
+          <br />
+          개발자에 대해 검색을 하면서 만들고 보여주는 것을 좋아하는 저는
+          개발자에 매료되었습니다.
           <br />
           이후 항해99 부트캠프에서 코딩을 공부하면서 코딩을 하는 것이 너무
           좋습니다.
@@ -79,6 +91,12 @@ const Text = styled.div`
   font-size: 20px;
   display: flex;
   color: white;
+  & > svg {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
   @media only screen and (max-width: 640px) {
     justify-content: center;
   }
@@ -87,8 +105,10 @@ const Text = styled.div`
 const Produce = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
   justify-content: center;
+  @media only screen and (min-width: 640px) {
+    margin-left: 50px;
+  }
 `;
 
 const Container = styled.div`
@@ -128,7 +148,6 @@ const ProfileImg = styled.div`
   background-image: url(${(props) => props.src});
   background-color: white;
   background-size: cover;
-  margin-left: 16px;
   display: flex;
   border: 1px solid #ededed;
   @media only screen and (max-width: 640px) {

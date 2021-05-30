@@ -36,7 +36,7 @@ const Skills = () => {
             <Ps />
           </SvgContainer>
           <ImgContainer>
-            <Img style={{ width: "115px", height: "115px" }} img={Maya} />
+            <MayaContainer img={Maya} />
           </ImgContainer>
         </AndSkillsContainer>
       </Div>
@@ -57,12 +57,38 @@ const AndSkillsContainer = styled.div`
   margin: 0 auto;
 `;
 
+const MayaContainer = styled.div`
+  background-image: url("${(props) => props.img}");
+  display: flex;
+  width: 115px;
+  height: 115px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @media only screen and (max-width: 580px) {
+    width: 80px;
+    height: 80px;
+  }
+  @media only screen and (max-width: 370px) {
+    width: 60px;
+    height: 60px;
+  }
+`;
+
 const SvgContainer = styled.div`
   display: flex;
   justify-content: center;
   & > svg {
     width: 115px;
     height: 115px;
+    @media only screen and (max-width: 580px) {
+      width: 80px;
+      height: 80px;
+    }
+    @media only screen and (max-width: 370px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 `;
 
@@ -110,6 +136,10 @@ const SkillsContainer = styled.div`
   column-gap: 2rem;
   width: auto;
   margin: 0 auto;
+  @media only screen and (max-width: 580px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
 `;
 
 export default Skills;

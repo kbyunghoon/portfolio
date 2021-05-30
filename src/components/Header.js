@@ -67,15 +67,13 @@ const Head = styled.div`
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 50rem;
-  height: 3rem;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
   background: rgba(45, 52, 54, 0.7);
-  border-radius: 0 0 50px 50px;
 `;
 
 const Cover = styled.div`
@@ -90,6 +88,7 @@ const List = styled.div`
   align-items: center;
   color: black;
   user-select: none;
+  font-size: 2rem;
   text-shadow: -1px 0 #f2f1f6, 0 1px #f2f1f6, 1px 0 #f2f1f6, 0 -1px #f2f1f6;
   opacity: 0.8;
   transition: 0.3s ease-in-out;
