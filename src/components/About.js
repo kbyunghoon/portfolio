@@ -7,7 +7,7 @@ import { ReactComponent as Copy } from "../media/svg/copy.svg";
 const About = () => {
   const copy = () => {
     navigator.clipboard.writeText("kbhthl11@gmail.com");
-    alert("이메일을 복사하였습니다.")
+    alert("이메일 복사 완료")
   };
 
   return (

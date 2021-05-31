@@ -171,12 +171,20 @@ const Video = styled.div`
   height: 270px;
   margin: 0 auto;
   @media only screen and (max-width: 600px) {
+    width: 427px;
+    height: 240px;
+  }
+  @media only screen and (max-width: 540px) {
+    width: 373px;
+    height: 210px;
+  }
+  @media only screen and (max-width: 470px) {
     width: 320px;
     height: 180px;
   }
-  @media only screen and (max-width: 440px) {
-    width: 213px;
-    height: 120px;
+  @media only screen and (max-width: 400px) {
+    width: 267px;
+    height: 150px;
   }
 `;
 
