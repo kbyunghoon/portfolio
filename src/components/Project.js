@@ -126,6 +126,7 @@ const TextBold = styled.div`
 `;
 
 const Button = styled.div`
+  user-select: none;
   background: #222;
   box-shadow: 10px 10px 14px rgb(56 56 56 / 30%);
   margin: 0 auto;
@@ -141,6 +142,7 @@ const Button = styled.div`
 `;
 
 const Title = styled.div`
+  user-select: none;
   font-size: 1.5rem;
   font-weight: bold;
 `;
@@ -154,6 +156,7 @@ const Bar = styled.div`
 `;
 
 const ProjectText = styled.div`
+  user-select: none;
   text-underline-position: under;
   margin-top: 4rem;
   display: flex;
@@ -216,6 +219,7 @@ const upDownHover = keyframes`
 `;
 
 const Projectis = styled.div`
+  user-select: none;
   font-family: "paybooc-Bold";
   font-size: 18px;
   height: 32px;
@@ -258,7 +262,7 @@ const ProjectBox = styled.div`
   margin: 0 auto;
   text-align: center;
   @media only screen and (min-width: 580px) {
-  margin-top: 44px;
+    margin-top: 44px;
   }
 `;
 

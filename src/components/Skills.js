@@ -107,6 +107,7 @@ const AndText = styled.div`
 `;
 
 const SkillsText = styled.div`
+  user-select: none;
   text-underline-position: under;
   margin-top: 10rem;
   display: flex;

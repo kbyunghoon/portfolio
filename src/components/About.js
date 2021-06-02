@@ -7,7 +7,7 @@ import { ReactComponent as Copy } from "../media/svg/copy.svg";
 const About = () => {
   const copy = () => {
     navigator.clipboard.writeText("kbhthl11@gmail.com");
-    alert("이메일 복사 완료")
+    alert("이메일 복사 완료");
   };
 
   return (
@@ -119,6 +119,7 @@ const Container = styled.div`
 `;
 
 const AboutText = styled.div`
+  user-select: none;
   margin-top: 5rem;
   margin-bottom: 1rem;
   display: flex;
