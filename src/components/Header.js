@@ -35,9 +35,9 @@ const Header = () => {
     <Head>
       <Container>
         <Cover>
-          {menu.map((p) => {
+          {menu.map((p,idx) => {
             return (
-              <List>
+              <List key={idx}>
                 <Link
                   activeClass="active"
                   to={p.title}

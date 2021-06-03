@@ -26,7 +26,7 @@ const Skills = () => {
           <Img img={Skill3} />
         </ImgContainer>
       </SkillsContainer>
-      <AndText>And</AndText>
+      {/* <AndText>And</AndText>
       <Div>
         <AndSkillsContainer>
           <SvgContainer>
@@ -39,7 +39,7 @@ const Skills = () => {
             <MayaContainer img={Maya} />
           </ImgContainer>
         </AndSkillsContainer>
-      </Div>
+      </Div> */}
     </Container>
   );
 };
@@ -114,6 +114,13 @@ const SkillsText = styled.div`
   text-decoration: underline;
   font-size: 5rem;
   margin-bottom: 2rem;
+  margin-top: 20rem;
+  @media only screen and (max-width: 600px) {
+  font-size: 4rem;
+  }
+  @media only screen and (max-width: 400px) {
+  font-size: 3rem;
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -137,6 +144,7 @@ const SkillsContainer = styled.div`
   column-gap: 2rem;
   width: auto;
   margin: 0 auto;
+  margin-bottom: 20rem;
   @media only screen and (max-width: 580px) {
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;

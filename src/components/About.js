@@ -40,21 +40,8 @@ const About = () => {
         </Profile>
       </Fade>
       <Fade left>
-        <Div
-          style={{
-            marginTop: "100px",
-            fontSize: "5rem",
-            textAlign: "center",
-            fontFamily: "AppleSDGothicNeoB",
-          }}
-        >
-          Who Am I?
-        </Div>
-        <Div
-          style={{ fontWeight: "600", fontSize: "1.5rem", marginTop: "1rem" }}
-        >
-          저는 무언가 만드는 것을 좋아합니다.
-        </Div>
+        <WhoamI>Who Am I?</WhoamI>
+        <Subtitle>저는 무언가 만드는 것을 좋아합니다.</Subtitle>
         <Div
           style={{
             fontSize: "1.2rem",
@@ -80,6 +67,32 @@ const About = () => {
     </Container>
   );
 };
+
+const Subtitle = styled.div`
+  display: flex;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: auto 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  word-break: keep-all;
+`;
+
+const WhoamI = styled.div`
+  margin-top: 100px;
+  font-size: 5rem;
+  text-align: center;
+  font-family: "AppleSDGothicNeoB";
+  display: flex;
+  color: white;
+  @media only screen and (max-width: 600px) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 3rem;
+  }
+`;
 
 const Div = styled.div`
   display: flex;
@@ -128,6 +141,12 @@ const AboutText = styled.div`
   color: white;
   font-family: "AppleSDGothicNeoR";
   text-underline-position: under;
+  @media only screen and (max-width: 600px) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 3rem;
+  }
 `;
 
 const Profile = styled.div`

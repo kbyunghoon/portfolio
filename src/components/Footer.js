@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 const Footer = () => {
   return (
     <Container>
-      <Text>본 페이지는 개인 포트폴리오용으로 제작되었습니다.</Text>
-      <Text>© 2021 Byunghoon Kim. All Rights Reserved.</Text>
+      <Fade up>
+        <Text>본 페이지는 개인 포트폴리오용으로 제작되었습니다.</Text>
+        <Text>© 2021 Byunghoon Kim. All Rights Reserved.</Text>
+      </Fade>
     </Container>
   );
 };
@@ -23,7 +26,6 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   height: 50px;
-  margin-top: 5rem;
   background-color: black;
 `;
 

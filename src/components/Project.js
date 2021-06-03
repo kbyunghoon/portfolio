@@ -7,7 +7,7 @@ const Project = () => {
   const project = {
     0: {
       id: 1,
-      title: "트리포트",
+      title: "트리포트(여행SNS)",
       url: "https://youtu.be/gfU-4di9ncs",
       notionurl:
         "https://www.notion.so/Triport-33eba307738c44a294474d4498b362b6",
@@ -20,11 +20,11 @@ const Project = () => {
         "라이브 스트리밍 서비스를 이용한 성능 최적화",
         "모바일에 최적화 된 반응형 구현",
       ],
-      tech: "React, Styled-Components, Redux Toolkit, hls.js",
+      tech: "Javascript, React, Styled-Components, Redux Toolkit, hls.js",
     },
     1: {
       id: 2,
-      title: "인스타그램 클론코딩",
+      title: "인스타그램(클론코딩)",
       url: "https://youtu.be/OJqWtzs6EeM",
       notionurl: "https://www.notion.so/302b0dabcd1841c7b2fdd9561bc7a750",
       desc: [
@@ -35,16 +35,16 @@ const Project = () => {
         "인스타그램 메인페이지 포스트 부분 구현",
         "moment 라이브러리를 사용한 시간 계산",
       ],
-      tech: "React, Styled-Components, Moment",
+      tech: "Javascript, React, Styled-Components, Moment",
     },
     2: {
       id: 3,
-      title: "항해하우스",
+      title: "항해하우스(관심사 채팅방)",
       url: "https://youtu.be/zD8-Xns-jrs",
       notionurl: "https://www.notion.so/35f8ce75569d495c90bad49d558a2e3e",
       desc: ["같은 관심사를 갖고 있는 인원만의 채팅방"],
       what: ["프로필 페이지 구현", "Formdata를 사용한 이미지 파일 전송"],
-      tech: "React, Styled-Components, Redux Toolkit",
+      tech: "Javascript, React, Styled-Components, Redux Toolkit",
     },
   };
 
@@ -82,13 +82,13 @@ const Project = () => {
               />
             </Video>
             <TextBold>Description</TextBold>
-            {settings.desc.map((p) => {
-              return <Text>{p}</Text>;
+            {settings.desc.map((p, idx) => {
+              return <Text key={idx}>{p}</Text>;
             })}
             <TextBold>What did I do?</TextBold>
-            {settings.what.map((p) => {
+            {settings.what.map((p, idx) => {
               return (
-                <Text>
+                <Text key={idx}>
                   <Text>•</Text>
                   <Text>{p}</Text>
                 </Text>
@@ -166,6 +166,12 @@ const ProjectText = styled.div`
   margin-bottom: 5rem;
   @media only screen and (max-width: 580px) {
     margin-bottom: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 3rem;
   }
 `;
 
