@@ -21,6 +21,7 @@ const Project = () => {
         "모바일에 최적화 된 반응형 구현",
       ],
       tech: "Javascript, React, Styled-Components, Redux Toolkit, hls.js",
+      is_exist: true,
     },
     1: {
       id: 2,
@@ -36,6 +37,7 @@ const Project = () => {
         "moment 라이브러리를 사용한 시간 계산",
       ],
       tech: "Javascript, React, Styled-Components, Moment",
+      is_exist: false,
     },
     2: {
       id: 3,
@@ -45,6 +47,7 @@ const Project = () => {
       desc: ["같은 관심사를 갖고 있는 인원만의 채팅방"],
       what: ["프로필 페이지 구현", "Formdata를 사용한 이미지 파일 전송"],
       tech: "Javascript, React, Styled-Components, Redux Toolkit",
+      is_exist: false,
     },
   };
 
@@ -103,6 +106,18 @@ const Project = () => {
             >
               프로젝트 상세보기
             </Button>
+            {settings.is_exist ? (
+              <Button
+              style={{marginTop:"15px"}}
+                onClick={() => {
+                  window.open("https://triport.kr", "_blank")
+                }}
+              >
+                홈페이지 바로가기
+              </Button>
+            ) : (
+              <></>
+            )}
           </ProjectWrap>
         </ProjectBox>
       </Fade>
